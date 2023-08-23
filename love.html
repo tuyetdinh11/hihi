@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: red;
+  }
+  #container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  #rectangle {
+    width: 200px;
+    height: 100px;
+    border: 2px solid red;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  #buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+</style>
+<title>Love Test</title>
+</head>
+<body>
+  <div id="container">
+    <div id="rectangle">P.Hanh có iu dĩ kheng hongg</div>
+    <div id="buttons">
+      <div class="button" onclick="showLove()">có</div>
+      <div class="button" id="noButton" onmouseover="moveButton()">honggg</div>
+    </div>
+  </div>
+  <script>
+    function showLove() {
+      alert("dĩ kheng cũm dị:3");
+    }
+
+    function moveButton() {
+      const noButton = document.getElementById("noButton");
+      const maxX = window.innerWidth - 100; // Adjust button width
+      const maxY = window.innerHeight - 40; // Adjust button height
+      const newX = Math.random() * maxX;
+      const newY = Math.random() * maxY;
+      noButton.style.position = "absolute";
+      noButton.style.left = newX + "px";
+      noButton.style.top = newY + "px";
+    }
+  </script>
+</body>
+</html>
